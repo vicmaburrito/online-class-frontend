@@ -3,9 +3,7 @@ import '../Styles/header.css';
 
 const Header = () => (
   <header>
-    <h1>
-      This is my app header
-    </h1>
+    <img src="logo.png" alt="Online Class Logo" />
   </header>
 );
 
