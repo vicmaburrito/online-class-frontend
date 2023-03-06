@@ -4,17 +4,20 @@ import {
 import './App.css';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Classes from './components/Classes';
+import Reservations from './components/Reservations';
 
 const App = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-  }, [dispatch]);
+  useEffect(() => { }, [dispatch]);
   return (
     <BrowserRouter>
-      <Header />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<></>} />
+        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/classes" element={<Classes />} />
+        <Route path="/reservations" element={<Reservations />} />
       </Routes>
     </BrowserRouter>
   );
