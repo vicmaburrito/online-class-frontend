@@ -1,0 +1,166 @@
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+}
+
+.landing_page {
+  height: 100vh;
+  background-color: #e6f0d0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--black-olive);
+}
+
+.img {
+  display: none;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  padding: 5em 2.8em;
+  text-align: center;
+  gap: 3em;
+  height: 100%;
+}
+
+.title {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0 0 0;
+  height: 100%;
+  text-align: left;
+}
+
+.text {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+}
+
+.text h1 {
+  font-size: 3.2em;
+}
+
+.text h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.list_btn {
+  display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.list_btn button {
+  border-radius: 50px;
+  color: var(--albaster);
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  font-weight: 700;
+  width: 130px;
+  height: 38px;
+  text-transform: uppercase;
+  border: 1px solid var(--black-olive);
+}
+
+.list_btn span {
+  filter: drop-shadow(0 1px 0 var(--black-olive));
+}
+
+.sign_up_btn {
+  background: var(--black-olive);
+}
+
+.sign_in_btn {
+  background: transparent;
+  color: var(--black-olive);
+}
+
+.sign_up_btn:hover,
+.sign_in_btn:hover {
+  background: var(--spanish-yellow);
+  border: 1px solid var(--metalic-orange);
+  color: var(--black-olive);
+  box-shadow: 3px 3px 4px 1px #0e0e0e9e;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 3rem;
+    width: 45vw;
+  }
+
+  .landing_page {
+    background-image: none;
+    background-size: contain;
+    background-position: right;
+  }
+
+  .img {
+    display: flex;
+    background: #e6f0d0;
+    height: 100vh;
+    width: 55vw;
+  }
+
+  .heading {
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+  }
+
+  .title {
+    width: 45vw;
+    padding: 5rem 3rem;
+    text-align: left;
+    background-color: var(--background);
+    justify-content: center;
+  }
+
+  .text {
+    width: auto;
+  }
+
+  .text h1 {
+    font-size: 3rem;
+    line-height: 35px;
+    justify-content: center;
+  }
+
+  .list_btn {
+    padding-top: 2rem;
+    justify-content: flex-start;
+  }
+
+  button {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1056px) {
+  .logo {
+    padding: 5rem 4.5rem 0 4.5rem;
+  }
+
+  .title {
+    padding: 5rem;
+  }
+
+  .text {
+    gap: 2rem;
+  }
+}
+
+@media screen and(min-width: 1440px) {
+  .title h2 {
+    width: 30vw;
+  }
+}
