@@ -1,0 +1,107 @@
+.form-container {
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebeeef;
+  box-shadow: 1px 5px 5px 0 #3e3a3a40, -4px -4px 10px #a89e9e4d;
+}
+
+.form-container label {
+  display: flex;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(-45deg, #c9c9c94d, #ffffff40);
+  box-shadow: 1px 5px 5px 0 #73727240, -4px -4px 10px #ffffff4d;
+}
+
+.form-container input,
+.form-container textarea {
+  border: none;
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  padding: 1.5rem 0.5em;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--dark-lemon-lime);
+  font-weight: normal;
+}
+
+input + span,
+textarea + span {
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  padding: 0 0.5em;
+  color: var(--cadet-gray);
+  line-height: 1.75em;
+  transition: top 0.15s;
+  letter-spacing: 1px;
+}
+
+.submit-btn span {
+  filter: drop-shadow(0 1px 0 black);
+}
+
+input:focus + span,
+input:valid + span,
+textarea:focus + span,
+textarea:valid + span {
+  top: -0.75em;
+  letter-spacing: 1px;
+}
+
+input:focus,
+textarea:focus {
+  color: var(--black-olive);
+  font-weight: normal;
+}
+
+input:focus + span,
+textarea:focus + span {
+  color: var(--dark-lemon-lime);
+}
+
+.form-group button {
+  background: transparent;
+  border: none;
+  padding: 1rem 0.5rem;
+}
+
+.form-container h1,
+.add-course-page h1 {
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  color: #524656;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-container h2,
+.add-course-page h2 {
+  font-size: 1.1rem;
+  letter-spacing: 1.25px;
+  color: var(--cadet-gray);
+  font-style: italic;
+  padding: 0.25rem 0 2rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media screen and (min-width: 1110px) {
+  .form-container h1,
+  .add-course-page h1 {
+    padding-top: 1rem;
+    font-size: 2.8rem;
+  }
+
+  .form-container h2,
+  .add-course-page h2 {
+    font-size: 1.3rem;
+  }
+}

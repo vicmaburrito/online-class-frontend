@@ -5,7 +5,7 @@ const defaultSlice = {
 };
 
 export const getAllReversations = createAsyncThunk(
-  'user/myreservations',
+  'user/reservations',
   async () => {
     const data = await fetch(
       '[URL to get all reservations]',

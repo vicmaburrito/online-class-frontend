@@ -9,7 +9,7 @@ export const fetchSignUp = createAsyncThunk(
     { fulfillWithValue, rejectWithValue },
   ) => {
     const signUpResponse = await fetch(
-      '[URL to sign up]',
+      'http://127.0.0.1:3000/users',
       {
         method: 'POST',
         headers: {
@@ -27,7 +27,7 @@ export const fetchSignUp = createAsyncThunk(
     );
     const data = await signUpResponse.json();
     if (signUpResponse.status === 200) {
-      navigate('/trips');
+      navigate('/courses');
       return fulfillWithValue(data);
     }
     return rejectWithValue({

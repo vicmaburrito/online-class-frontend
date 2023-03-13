@@ -11,7 +11,7 @@ export const fetchSignIn = createAsyncThunk(
     { fulfillWithValue, rejectWithValue },
   ) => {
     const signInResponse = await fetch(
-      '[URL to sign in]',
+      'http://127.0.0.1:3000/auth/login',
       {
         method: 'POST',
         headers: {
@@ -27,7 +27,7 @@ export const fetchSignIn = createAsyncThunk(
     );
     const data = await signInResponse.json();
     if (signInResponse.status === 200) {
-      navigate('/trips');
+      navigate('/courses');
       return fulfillWithValue(data);
     }
     return rejectWithValue({

@@ -4,7 +4,7 @@ import { getAllReversations } from '../redux/reducers/reserveSlice';
 import ReservationItem from '../components/ReservationItem';
 import '../Styles/reservations.css';
 
-export default function MyReservations() {
+export default function Reservations() {
   const reservations = useSelector((store) => store.reserveItems.reserved);
   const dispatch = useDispatch();
 

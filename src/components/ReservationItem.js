@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCourses } from '../redux/reducers/courseSlice';
@@ -21,7 +22,7 @@ export default function ReservationItem({ delay, reservation }) {
 
   return (
     <li className="reservation-item row" style={styles}>
-      <h1>reservation Item</h1>
+      <h1>{course.name}</h1>
     </li>
   );
 }

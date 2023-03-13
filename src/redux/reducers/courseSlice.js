@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -8,7 +9,7 @@ export const fetchCourses = createAsyncThunk('courses/fetchCourses', async () =>
       Authorization: `Bearer ${token}`,
     },
   };
-  const response = await axios.get('[API URL]/courses', config);
+  const response = await axios.get('http://127.0.0.1:3000/courses', config);
   return response.data;
 });
 
@@ -31,7 +32,7 @@ export const addCourse = createAsyncThunk('courses/addCourse', async (courseData
     },
   };
 
-  const response = await axios.post('[API URL]/courses', formData, config);
+  const response = await axios.post('http://127.0.0.1:3000/courses/', formData, config);
   return response.data;
 });
 
@@ -44,7 +45,7 @@ export const deleteCourse = createAsyncThunk('courses/deleteCourse', async (cour
     },
     crossdomain: true,
   };
-  await axios.delete(`[API URL]/courses/${courseId}`, config);
+  await axios.delete(`http://127.0.0.1:3000/courses/${courseId}`, config);
   return {
     id: courseId,
   };

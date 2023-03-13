@@ -1,5 +1,5 @@
 {
-  "name": "online-classes-frontend",
+  "name": "nline-classes-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,6 +22,7 @@
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-test-renderer": "^18.2.0",
+    "redux-mock-store": "^1.5.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2",
     "styled-components": "^5.3.6",
@@ -32,7 +33,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
