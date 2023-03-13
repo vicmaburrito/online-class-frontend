@@ -1,0 +1,46 @@
+.reservation-item {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 1s ease-in-out;
+  animation: downToUp ease-in-out;
+}
+
+@keyframes downToUp {
+  0% {
+    transform: translateY(2000%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.destination-city {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.departure-city {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7c7c7c;
+}
+
+.reservation-price {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #000;
+  text-align: right;
+}
+
+.reservation-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7c7c7c;
+}

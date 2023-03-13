@@ -10,7 +10,7 @@ const Navbar = () => (
     <Header />
     <ul>
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/classes">Classes</Link></li>
+      <li><Link to="/classes">Courses</Link></li>
       <li><Link to="/reservations">Reservations</Link></li>
     </ul>
   </nav>
