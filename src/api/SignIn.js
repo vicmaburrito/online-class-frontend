@@ -7,7 +7,7 @@ const SignInUser = async (formData) => {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   const response = await fetch(
-    `${host}/users/sign_in`,
+    `${host}/auth/login`,
     {
       method: 'POST',
       headers: myHeaders,

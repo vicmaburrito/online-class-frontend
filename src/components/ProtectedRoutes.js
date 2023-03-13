@@ -11,7 +11,7 @@ const ProtectedRoutes = ({ children, roles }) => {
 
   if (!localStorage.user) {
     return (
-      <Navigate to="/users/sign_in" state={{ from: location }} />
+      <Navigate to="/auth/login" state={{ from: location }} />
     );
   }
 
