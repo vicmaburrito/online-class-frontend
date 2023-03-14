@@ -1,3 +1,5 @@
+import host from './host';
+
 const addCourseAPI = async (token, formData) => {
   const myHeaders = new Headers();
   myHeaders.append('Authorization', token);
@@ -24,7 +26,7 @@ const addCourseAPI = async (token, formData) => {
   };
 
   return fetch(
-    'http://127.0.0.1:3000/courses',
+    `${host}/courses`,
     requestOptions,
   ).then((response) => response.text());
 };

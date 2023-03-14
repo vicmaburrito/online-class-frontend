@@ -1,5 +1,7 @@
+import host from '../../api/host';
+
 const reserveCourse = async () => {
-  const response = await fetch('http://127.0.0.1:3000/');
+  const response = await fetch(`${host}`);
   const reservationStatus = await response.json;
   return reservationStatus;
 };

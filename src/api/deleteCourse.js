@@ -1,3 +1,5 @@
+import host from './host';
+
 const deleteCourseAPI = async (token, id) => {
   const myHeaders = new Headers();
   myHeaders.append('Authorization', token);
@@ -10,7 +12,7 @@ const deleteCourseAPI = async (token, id) => {
   };
 
   return fetch(
-    `http://127.0.0.1:3000/courses/${id}`,
+    `${host}/courses/${id}`,
     requestOptions,
   )
     .then((response) => response.text())
