@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';

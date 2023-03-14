@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { CHANGE_USER_STATUS, GET_USER_DATA } from '../redux/reducers/token';
 import { updateSignedInStatus } from '../redux/reducers/users';
 import store from '../redux/store';

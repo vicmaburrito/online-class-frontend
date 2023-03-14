@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -21,7 +22,7 @@ it('Reserve Form renders correctly', () => {
           options={packageOptions}
           dropDownId="package"
           dropDownName="Select package"
-          handleChange={() => {}}
+          handleChange={() => { }}
         />
       </Router>
     </Provider>,
