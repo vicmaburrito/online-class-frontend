@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
+import Button from '../components/Button';
 import NavButton from '../components/NavButton';
 import { setCourseDetail, setCourseLoading } from '../redux/reducers/course';
 import Spinner from '../components/Spinner';
