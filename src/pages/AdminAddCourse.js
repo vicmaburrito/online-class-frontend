@@ -127,7 +127,7 @@ const AdminAddCourse = () => {
             </div>
           </fieldset>
           <Button
-          
+            btnType="submit"
             btnName="Add Course"
             bgColor="bg-white text-green"
           />
