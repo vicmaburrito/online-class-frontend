@@ -40,7 +40,6 @@ const ReserveForm = () => {
         city_id: id,
       });
     }
-    console.log(coursePackage);
   };
 
   const handleSubmit = (e) => {
