@@ -8,6 +8,7 @@ import makeReservation from '../api/ReserveCourse';
 import DropDown from '../components/DropDown';
 import Message from '../components/Message';
 import { changeStatus } from '../redux/reducers/reservation';
+import Calendar from '../components/Calendar';
 
 const ReserveForm = () => {
   const dispatch = useDispatch();
@@ -22,30 +23,24 @@ const ReserveForm = () => {
   });
 
   const [coursePackage, setCoursePackage] = useState({
-    course_date_id: '',
-    package: '',
-  });
-
-  const courseDates = [];
-  courseDetail.course_dates.forEach((courseDate) => {
-    courseDates.push({
-      id: courseDate.id,
-      item: courseDate.date,
-    });
+    course_id: `${courseDetail.id}`,
+    city_id: '',
+    sign_up_date: '',
   });
 
   const handleChange = (e, id) => {
-    if (e.target.parentElement.id === 'course-date') {
+    if (e instanceof Date) {
       setCoursePackage({
         ...coursePackage,
-        course_date_id: id,
+        sign_up_date: e,
       });
     } else {
       setCoursePackage({
         ...coursePackage,
-        package: e.target.textContent,
+        city_id: id,
       });
     }
+    console.log(coursePackage);
   };
 
   const handleSubmit = (e) => {
@@ -79,9 +74,11 @@ const ReserveForm = () => {
   }, [status]);
 
   const packageOptions = [
-    { id: 1, item: 'Standard' },
-    { id: 2, item: 'VIP' },
-    { id: 3, item: 'Luxury' },
+    { id: 1, item: 'Tehran' },
+    { id: 2, item: 'Paris' },
+    { id: 3, item: 'Lyon' },
+    { id: 4, item: 'Madrid' },
+    { id: 5, item: 'Oslo' },
   ];
 
   return (
@@ -99,7 +96,7 @@ const ReserveForm = () => {
 
       <img
         className="w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10"
-        src="https://www.fanabc.com/english/wp-content/uploads/2021/08/Courseism-Danakil-Depression.jpg"
+        src=""
         alt="reserve-form-bg"
       />
 
@@ -128,15 +125,10 @@ const ReserveForm = () => {
               dropDownId="package"
               options={packageOptions}
               handleChange={handleChange}
-              dropDownName="Select Package"
-            />
-            <DropDown
-              dropDownId="course-date"
-              options={courseDates}
-              handleChange={handleChange}
-              dropDownName="Select Date"
+              dropDownName="Select City"
             />
           </div>
+          <Calendar handleDateChange={handleChange} id="calendar" />
           <Button
             btnType="submit"
             btnName={(
@@ -152,11 +144,8 @@ const ReserveForm = () => {
             )}
             bgColor="bg-gray text-green w-2/3 mt-4 mx-auto"
           />
-
         </form>
-
       </div>
-
     </div>
   );
 };

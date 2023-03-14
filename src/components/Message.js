@@ -56,6 +56,7 @@ Message.defaultProps = {
   duration: 5000,
   icon: <TiInfo />,
   title: 'Information',
+  message: 'test',
   type: 'info',
   color: 'black',
 
@@ -66,7 +67,7 @@ Message.propTypes = {
   duration: PropTypes.number,
   icon: PropTypes.node,
   title: PropTypes.string,
-  message: PropTypes.string.isRequired,
+  message: PropTypes.string,
   position: PropTypes.string,
   type: PropTypes.string,
   color: PropTypes.string,

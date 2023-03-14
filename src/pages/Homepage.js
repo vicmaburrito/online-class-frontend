@@ -67,8 +67,7 @@ function Homepage() {
               <Link key={course.id} to={`/course/${course.id}`} className="md:h-[420px] flex-1">
                 <CourseCard
                   courseName={course.name}
-                  courseLocale={course.location}
-                  courseImage={course.image_urls[0]}
+                  courseDesc={course.description}
                 />
               </Link>
             ))

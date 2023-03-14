@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  TiSocialFacebook,
-  TiSocialInstagram,
-  TiSocialTwitter,
-} from 'react-icons/ti';
 
 const CourseCard = (props) => {
   const {
-    courseName, courseLocale, courseImage, courseDate,
+    courseName, courseDesc, courseImage, courseDate,
   } = props;
 
   return (
@@ -21,22 +16,12 @@ const CourseCard = (props) => {
       </h2>
       <hr className="w-1/4 mx-auto" />
       <div className="flex flex-col flex-wrap text-center gap-3 pt-5">
-        <p className="font-medium text-gray-dark">{`Location: ${courseLocale}`}</p>
+        <p className="font-medium text-gray-dark">
+          {courseDesc}
+        </p>
 
         <p className="font-medium text-black">{courseDate}</p>
       </div>
-
-      <ul className="flex flex-row justify-center gap-4 pt-5">
-        <li className="border-solid border-2 rounded-full border-gray-dark hover:border-green">
-          <TiSocialFacebook className="fill-gray-dark hover:fill-green" />
-        </li>
-        <li className="border-solid border-2 rounded-full border-gray-dark hover:border-green">
-          <TiSocialTwitter className="fill-gray-dark hover:fill-green" />
-        </li>
-        <li className="border-solid border-2 rounded-full border-gray-dark hover:border-green">
-          <TiSocialInstagram className="fill-gray-dark hover:fill-green" />
-        </li>
-      </ul>
     </div>
   );
 };
@@ -45,11 +30,12 @@ export default CourseCard;
 
 CourseCard.propTypes = {
   courseName: PropTypes.string.isRequired,
-  courseLocale: PropTypes.string.isRequired,
-  courseImage: PropTypes.string.isRequired,
+  courseDesc: PropTypes.string.isRequired,
+  courseImage: PropTypes.string,
   courseDate: PropTypes.string,
 };
 
 CourseCard.defaultProps = {
   courseDate: '',
+  courseImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL1XAVkkTszQknK_r31aLcAT4ysbRQyK_zTaCvgExByvhw2YcoU1ukun_Qv1PHzonrlIg&usqp=CAU',
 };

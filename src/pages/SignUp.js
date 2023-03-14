@@ -11,7 +11,7 @@ export default function SignUp() {
   const signedIn = useSelector((state) => state.signedIn);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
-    full_name: '',
+    username: '',
     email: '',
     password: '',
   });
@@ -83,7 +83,7 @@ export default function SignUp() {
           <input
             className="form-input"
             type="text"
-            name="full_name"
+            name="username"
             value={formData.full_name}
             placeholder="Full Name"
             onChange={handleChange}
