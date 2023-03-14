@@ -76,7 +76,7 @@ const CourseDetails = () => {
           </div>
         ) : <Spinner />}
       <Link to="/" title="Back" className="mt-4 absolute bottom-4 left-0">
-        <NavButton btnDirection="left" bgColor="bg-green text-white" />
+       
       </Link>
     </section>
   );
