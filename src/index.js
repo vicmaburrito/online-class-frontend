@@ -1,16 +1,20 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import 'tw-elements';
+import store from './redux/store';
 import App from './App';
-import store from './redux/configureStore';
+import './index.css';
 
 const container = document.getElementById('root');
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
+const root = createRoot(container);
+
 root.render(
-  // <React.StrictMode>
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  // </React.StrictMode>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
 );
