@@ -4,7 +4,11 @@ import deleteCourseAPI from '../../api/deleteCourse';
 import addCourseAPI from '../../api/addCourse';
 import host from '../../api/host';
 
-
+export const fetchCourses = createAsyncThunk('courses/fetchCourses', async () => {
+  const response = await axios.get(`${host}/courses`);
+  const data = await response.data;
+  return data;
+});
 
 export const deleteCourse = createAsyncThunk(
   'courses/deleteCourse',
