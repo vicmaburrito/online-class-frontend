@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '../components/Button';
 import NavButton from '../components/NavButton';
-// import Carousel from '../components/Carousel';
 import { setCourseDetail, setCourseLoading } from '../redux/reducers/course';
 import Spinner from '../components/Spinner';
 import host from '../api/host';
