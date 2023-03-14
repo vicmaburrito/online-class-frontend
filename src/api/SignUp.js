@@ -6,7 +6,7 @@ const CreateUser = async (formData) => {
   const response = await fetch(`${host}/users`, {
     method: 'POST',
     headers: myHeaders,
-    body: JSON.stringify({ user: formData }),
+    body: JSON.stringify(formData),
   })
     .then((response) => response.text())
     .then((result) => {

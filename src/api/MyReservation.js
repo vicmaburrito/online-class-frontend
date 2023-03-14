@@ -1,9 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import host from './host';
 
 const getReservations = createAsyncThunk(
   'myReservations/getReservations',
   async () => {
-    const response = await fetch('http://127.0.0.1:3000/enrollments', {
+    const response = await fetch(`${host}/enrollments`, {
       method: 'GET',
       headers: {
         // accept: 'application/json',

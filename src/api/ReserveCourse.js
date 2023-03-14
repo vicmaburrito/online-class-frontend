@@ -1,9 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import host from './host';
 
 const makeReservation = createAsyncThunk(
   'reservation/postReservation',
   async (coursePackage) => {
-    const response = await fetch('http://127.0.0.1:3000/enrollments', {
+    const response = await fetch(`${host}/enrollments`, {
       method: 'POST',
       headers: {
         accept: 'application/json',
