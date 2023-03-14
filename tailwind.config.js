@@ -64,6 +64,6 @@ module.exports = {
   },
   plugins: [
     // eslint-disable-next-line global-require
-    require('./node_modules/tw-elements/dist/plugin'),
+    require('tw-elements/dist/plugin'),
   ],
 };
