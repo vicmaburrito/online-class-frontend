@@ -14,7 +14,7 @@ const SocialIcons = () => (
           className="hover:text-green transition duration-300 ease"
           rel="noreferrer"
         >
-          <FaTwitter className="side-nav-social" />
+          <FaTwitter className="side-nav-social text-3xl hover: border-2 hover:border-green rounded-full p-1" />
         </a>
       </li>
       <li>
@@ -23,7 +23,7 @@ const SocialIcons = () => (
           className="hover:text-green transition duration-300 ease"
           rel="noreferrer"
         >
-          <FaFacebookF className="side-nav-social" />
+          <FaFacebookF className="side-nav-social text-3xl hover: border-2 hover:border-green rounded-full p-1" />
         </a>
       </li>
       <li>
@@ -33,7 +33,7 @@ const SocialIcons = () => (
           className="hover:text-green transition duration-300 ease"
           rel="noreferrer"
         >
-          <TiSocialGooglePlus className="side-nav-social " />
+          <TiSocialGooglePlus className="side-nav-social text-3xl hover: border-2 hover:border-green rounded-full p-1" />
         </a>
       </li>
       <li>
@@ -43,7 +43,7 @@ const SocialIcons = () => (
           className="hover:text-green transition duration-300 ease"
           rel="noreferrer"
         >
-          <FaVimeoV className="side-nav-social " />
+          <FaVimeoV className="side-nav-social text-3xl hover: border-2 hover:border-green rounded-full p-1" />
         </a>
       </li>
       <li>
@@ -53,7 +53,7 @@ const SocialIcons = () => (
           className="hover:text-green transition duration-300 ease"
           rel="noreferrer"
         >
-          <FaPinterestP className="side-nav-social" />
+          <FaPinterestP className="side-nav-social text-3xl hover: border-2 hover:border-green rounded-full p-1" />
         </a>
       </li>
     </ul>

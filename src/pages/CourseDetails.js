@@ -6,6 +6,7 @@ import NavButton from '../components/NavButton';
 import { setCourseDetail, setCourseLoading } from '../redux/reducers/course';
 import Spinner from '../components/Spinner';
 import host from '../api/host';
+import Carousel from '../components/Carousel';
 
 const CourseDetails = () => {
   const course = useSelector((state) => state.course.courseDetail);
@@ -35,13 +36,13 @@ const CourseDetails = () => {
   return (
     <section
       id="details"
-      className="flex flex-col min-h-screen max-w-screen relative p-3 mt-12"
+      className="flex flex-col max-w-screen relative p-3 mt-12"
     >
       {!loading
         ? (
           <div className="flex flex-col mb-4 md:flex-row md:items-center md:justify-between">
             <div className="md:w-3/5 md:mx-auto">
-              {/* <Carousel images={course.image_urls.map((el, i) => ({ id: i, src: el }))} /> */}
+              <Carousel images={[{ id: 1, src: course.picture }]} />
             </div>
             <div className="sidebar mt-4 md:w-[20%] md:flex-none">
               <h2 className="font-semibold text-2xl md:text-4xl text-center md:text-end mb-4">
