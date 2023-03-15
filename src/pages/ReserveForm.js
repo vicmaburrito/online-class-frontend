@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 import { CgSpinner as CircleSpinner } from 'react-icons/cg';
 import Button from '../components/Button';
 import makeReservation from '../api/ReserveCourse';
@@ -9,6 +9,7 @@ import DropDown from '../components/DropDown';
 import Message from '../components/Message';
 import { changeStatus } from '../redux/reducers/reservation';
 import Calendar from '../components/Calendar';
+import host from '../api/host';
 
 const ReserveForm = () => {
   const dispatch = useDispatch();
@@ -72,13 +73,18 @@ const ReserveForm = () => {
     displayMessage();
   }, [status]);
 
-  const packageOptions = [
-    { id: 1, item: 'Tehran' },
-    { id: 2, item: 'Paris' },
-    { id: 3, item: 'Lyon' },
-    { id: 4, item: 'Madrid' },
-    { id: 5, item: 'Oslo' },
-  ];
+  const [packageOptions, setPackageOptions] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios(`${host}/cities`);
+      const { data } = response;
+      // eslint-disable-next-line camelcase
+      const newData = data.map(({ id, city_name }) => ({ id, item: city_name }));
+      setPackageOptions(newData);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="relative flex flex-col justify-center min-h-screen bg-green overflow-hidden bg-opacity-80">
