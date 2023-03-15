@@ -32,7 +32,7 @@ const DropDown = (props) => {
     <div className="flex justify-center z-50">
       <div className="relative">
         <button
-          className="dropdown-button px-6 py-3 bg-transparent text-white border-2 border-white font-medium text-sm leading-tight uppercase rounded-full shadow-md hover: bg-transparent hover:shadow-lg focus:bg-transparent focus:shadow-lg focus:outline-none focus:ring-0 active:bg-transparent active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap min-w-[180px]"
+          className="dropdown-button px-6 py-3 bg-transparent text-white border-2 border-white font-medium text-sm leading-tight uppercase rounded-full shadow-md hover:bg-transparent hover:shadow-lg focus:bg-transparent focus:shadow-lg focus:outline-none focus:ring-0 active:bg-transparent active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-center whitespace-nowrap min-w-[180px]"
           type="button"
           onClick={handleClick}
           id={`${dropDownId}-button`}

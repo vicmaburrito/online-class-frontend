@@ -36,7 +36,7 @@ const SideNav = () => {
   };
 
   return (
-    <div className="side-nav flex flex-col justify-between w-4/5 md: w-2/5 lg:w-1/5 h-screen bg-white border border-r-gray p-4 fixed left-0 top-0 z-[1000] translate-x-[-100%] transform duration-500 delay-300 ease-in-out shadow-xl" onMouseLeave={hideSideBar}>
+    <div className="side-nav flex flex-col justify-between w-4/5 md:w-2/5 lg:w-1/5 h-screen bg-white border border-r-gray p-4 fixed left-0 top-0 z-[1000] translate-x-[-100%] transform duration-500 delay-300 ease-in-out shadow-xl" onMouseLeave={hideSideBar}>
       <Link to="/" className="p-0 mt-4 -ml-5">
         <img
           src="https://cdn.buttercms.com/SKLnmhpShSsNxosJpRI2"
