@@ -15,24 +15,28 @@ function MyReservations() {
     dispatch(getReservations());
   }, []);
 
-  const handleRemove = (e) => {
+  const handleRemove = async (e) => {
     const { id } = e.target;
     const userData = JSON.parse(localStorage.getItem('user'));
-    const myHeaders = new Headers();
-    myHeaders.append('Authorization', userData.token);
-    myHeaders.append('Content-Type', 'application/json');
-    console.log(myHeaders);
     const requestOptions = {
       method: 'DELETE',
-      headers: myHeaders,
+      headers: {
+        Authorization: `Bearer ${userData.token}`,
+        'Content-Type': 'application/json',
+      },
       redirect: 'follow',
     };
 
-    const deleteReservation = async (id, requestOptions) => {
+    try {
       const response = await axios(`${host}/enrollments/${id}`, requestOptions);
-      return response;
-    };
-    deleteReservation(id, requestOptions);
+      if (response.status === 204) {
+        window.location.reload(); // Reload the page to reflect the new data
+      } else {
+        console.log('Failed to delete reservation:', response.data);
+      }
+    } catch (error) {
+      console.log('Error deleting reservation:', error);
+    }
   };
 
   // eslint-disable-next-line camelcase
