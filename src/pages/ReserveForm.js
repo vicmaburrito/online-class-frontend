@@ -95,7 +95,7 @@ const ReserveForm = () => {
 
       <img
         className="w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10"
-        src=""
+        src="https://elearningindustry.com/wp-content/uploads/2021/08/Online-Learning-Benefits-And-Challenges.png"
         alt="reserve-form-bg"
       />
 

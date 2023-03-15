@@ -63,16 +63,14 @@ export default function SignUp() {
         )
       }
       <div
-        className="w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 bg-no-repeat bg-cover"
-        style={{
-          backgroundImage:
-            '',
-        }}
+        className="hasBg w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 bg-no-repeat bg-cover"
+        style={{ backgroundImage: 'URL(https://elearningindustry.com/wp-content/uploads/2021/08/Online-Learning-Benefits-And-Challenges.png)' }}
       />
       <img
-        src=""
+        src="https://cdn.buttercms.com/SKLnmhpShSsNxosJpRI2"
         alt="logo"
         className="transform scale-75 mt-4 md:mt-0 mb-8"
+        style={{ maxHeight: '25vh' }}
       />
       <div className="md:w-full max-w-sm">
         <form
@@ -81,7 +79,7 @@ export default function SignUp() {
         >
           <h1 className="mb-4 text-2xl font-semibold text-center">Sign Up</h1>
           <input
-            className="form-input"
+            className="form-input py-3 px-5 rounded-full font-semibold bg-transparent text-black border-green border"
             type="text"
             name="username"
             value={formData.full_name}
@@ -89,7 +87,7 @@ export default function SignUp() {
             onChange={handleChange}
           />
           <input
-            className="form-input"
+            className="form-input py-3 px-5 rounded-full font-semibold bg-transparent text-black border-green border"
             type="email"
             name="email"
             value={formData.email}
@@ -97,7 +95,7 @@ export default function SignUp() {
             onChange={handleChange}
           />
           <input
-            className="form-input"
+            className="form-input py-3 px-5 rounded-full font-semibold bg-transparent text-black border-green border"
             type="password"
             name="password"
             value={formData.password}

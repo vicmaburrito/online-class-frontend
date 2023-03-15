@@ -55,10 +55,9 @@ const AdminAddCourse = () => {
         <Message message="Course not created" type="alert" color="red" />
       )}
       <div
-        className="w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 bg-no-repeat bg-cover"
+        className="hasBg w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 bg-no-repeat bg-cover"
         style={{
-          backgroundImage:
-            '',
+          backgroundImage: 'URL(https://elearningindustry.com/wp-content/uploads/2021/08/Online-Learning-Benefits-And-Challenges.png)',
         }}
       />
       <div className="flex flex-col mx-auto justify-center align-middle">
