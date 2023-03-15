@@ -35,6 +35,15 @@ function MyReservations() {
     deleteReservation(id, requestOptions);
   };
 
+  // eslint-disable-next-line camelcase
+  function formatDate(sign_up_date) {
+    const date = new Date(sign_up_date);
+    const day = date.toLocaleString('default', { day: 'numeric' });
+    const month = date.toLocaleString('default', { month: 'long' });
+    const year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
+  }
+
   return (
     <section className="w-screen relative flex flex-col justify-center min-h-screen bg-opacity-80 md:w-full md:pb-1 mb:overflow-scroll">
       <div className="mx-auto w-full flex flex-col p-10">
@@ -45,15 +54,15 @@ function MyReservations() {
       </div>
       <div className="w-full flex flex-wrap gap-5 justify-center md:h-[500px] md:w-full">
         {reservations.map((reservation) => (
-          <div key={reservation.enrollment_id}>
+          <div key={reservation.id}>
             <CourseCard
               courseName={reservation.name}
               courseDesc={reservation.description}
               courseImage={reservation.picture}
-              courseDate={reservation.sign_up_date}
+              courseDate={formatDate(reservation.sign_up_date)}
               cityID={reservation.city_id.toString()}
             />
-            <button type="submit" id={reservation.enrollment_id} className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleRemove}>
+            <button type="submit" id={reservation.id} className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleRemove}>
               Cancel Enrollment
             </button>
           </div>
