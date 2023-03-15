@@ -50,12 +50,16 @@ const ReserveForm = () => {
 
   useEffect(() => {
     const displayMessage = () => {
-      if (status === 'Success' && message === 'Booked successfully.') {
+      if (status === 'Success') {
+        setShowMessage({
+          type: 'success',
+          message: 'Booked successfully!',
+          title: 'Success',
+        });
         setTimeout(() => {
-          navigate(-1);
-        }, 1000);
-
-        dispatch(changeStatus({ message: null, status: null }));
+          navigate('/reservations');
+          dispatch(changeStatus({ message: null, status: null }));
+        }, 2000);
       } else if (status === 'Loading') {
         setShowMessage({
           type: null,
