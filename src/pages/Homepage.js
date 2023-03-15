@@ -67,6 +67,7 @@ function Homepage() {
                 <CourseCard
                   courseName={course.name}
                   courseDesc={course.description}
+                  courseImage={course.picture}
                 />
               </Link>
             ))
