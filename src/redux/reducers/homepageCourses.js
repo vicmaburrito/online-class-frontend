@@ -2,18 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import host from '../../api/host';
 
 export const homepageCourseAPI = createAsyncThunk('homecourse/courses', async () => {
-  const userData = JSON.parse(localStorage.getItem('user'));
-  const myHeaders = new Headers();
-  myHeaders.append('Authorization', userData.token);
-  myHeaders.append('Content-Type', 'application/json');
-
-  const requestOptions = {
-    method: 'GET',
-    headers: myHeaders,
-    redirect: 'follow',
-  };
-
-  const response = await fetch(`${host}/courses`, requestOptions);
+  const response = await fetch(`${host}/courses`);
   const data = await response.json();
   return data;
 });
