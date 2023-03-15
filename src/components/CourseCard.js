@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
+import host from '../api/host';
 
 const CourseCard = (props) => {
   const {
-    courseName, courseDesc, courseImage, courseDate,
+    courseName, courseDesc, courseImage, courseDate, cityID,
   } = props;
+
+  const [packageOptions, setPackageOptions] = useState([]);
+
+  if (cityID) {
+    useEffect(() => {
+      async function fetchData() {
+        const response = await axios(`${host}/cities`);
+        const { data } = response;
+        // eslint-disable-next-line eqeqeq
+        const newData = data.filter((item) => item.id == cityID);
+        setPackageOptions(newData[0]);
+      }
+      fetchData();
+    }, []);
+  }
 
   return (
     <div
@@ -25,6 +42,8 @@ const CourseCard = (props) => {
         </p>
 
         <p className="font-medium text-black">{courseDate}</p>
+        -
+        <p className="font-medium text-black">{packageOptions.city_name}</p>
       </div>
     </div>
   );
@@ -37,9 +56,11 @@ CourseCard.propTypes = {
   courseDesc: PropTypes.string.isRequired,
   courseImage: PropTypes.string,
   courseDate: PropTypes.string,
+  cityID: PropTypes.string,
 };
 
 CourseCard.defaultProps = {
   courseDate: '',
+  cityID: '',
   courseImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL1XAVkkTszQknK_r31aLcAT4ysbRQyK_zTaCvgExByvhw2YcoU1ukun_Qv1PHzonrlIg&usqp=CAU',
 };
