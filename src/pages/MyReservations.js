@@ -58,7 +58,7 @@ function MyReservations() {
       </div>
       <div className="w-full flex flex-wrap gap-5 justify-center md:h-[500px] md:w-full">
         {reservations.map((reservation) => (
-          <div key={reservation.id}>
+          <div key={reservation.enrollment_id}>
             <CourseCard
               courseName={reservation.name}
               courseDesc={reservation.description}
@@ -66,7 +66,7 @@ function MyReservations() {
               courseDate={formatDate(reservation.sign_up_date)}
               cityID={reservation.city_id.toString()}
             />
-            <button type="submit" id={reservation.id} className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleRemove}>
+            <button type="submit" id={reservation.enrollment_id} className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleRemove}>
               Cancel Enrollment
             </button>
           </div>
