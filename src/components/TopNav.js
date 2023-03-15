@@ -9,6 +9,7 @@ const TopNav = ({ btnColor }) => {
   const handleClick = () => {
     const nav = document.querySelector('.side-nav');
     nav.classList.add('translate-x-0');
+    nav.classList.remove('translate-x-[-100%]');
   };
   const buttonName = <BiSearch className="text-green rotate-90 text-lg " />;
   return (

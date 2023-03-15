@@ -24,16 +24,16 @@ const Message = (props) => {
 
   return (
     showMessage && (
-      <div className={`flash-message ${position}`}>
-        <div className={`message-header header-${type}`}>
-          <span className={`message-header-icon icon-${type}`}>
+      <div className={`flash-message flex flex-col rounded min-w-[80%] md: max-w-[35%] border z-[100] border-gray shadow-xl bg-white ${position}`}>
+        <div className={`message-header w-full flex flex-row gap-2 py-1 drop-shadow-md bg-opacity-40 header-${type}`}>
+          <span className={`message-header-icon block pr-2 border-r my-auto text-2xl icon-${type}`}>
             {icon}
           </span>
-          <span className={`message-header-title title-${type}`}>
+          <span className={`message-header-title block font-bold text-sm capitalize my-auto title-${type}`}>
             {title}
           </span>
         </div>
-        <p className={`message-content message-${color}`}>
+        <p className={`message-content font-medium text-justify p-2 min-h-[50px] text-sm py-1 message-${color}`}>
           {message}
         </p>
         <button

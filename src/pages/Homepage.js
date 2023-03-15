@@ -38,7 +38,6 @@ function Homepage() {
       <div
         className="mx-auto w-full flex flex-col gap-4 md:flex-row
        md:justify-center md:items-center md:min-h-[70vh] md:gap-0"
-        style={{ maxWidth: '1028px' }}
       >
         <div className="hidden md:block">
           <button

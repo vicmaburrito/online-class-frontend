@@ -7,8 +7,12 @@ const CourseCard = (props) => {
   } = props;
 
   return (
-    <div className="w-[90%] md:max-w-xs rounded overflow-hidden mx-auto shadow-lg
+    <div
+      className="w-[90%] md:max-w-xs rounded overflow-hidden mx-auto shadow-lg
      shadow-gray-dark md:pb-3 md:h-full pb-10"
+      style={
+        { border: '1px solid lightgray' }
+      }
     >
       <img src={courseImage} alt="Course" className="w-100 h-[50%] pb-5 mx-auto " />
       <h2 className="text-center pb-5 text-black font-l font-bold">
