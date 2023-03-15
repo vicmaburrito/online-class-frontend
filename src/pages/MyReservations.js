@@ -60,16 +60,18 @@ function MyReservations() {
         <div className="w-full flex flex-wrap gap-5 justify-center md:h-[500px] md:w-full">
           {reservations.map((reservation) => (
             <div key={reservation.enrollment_id}>
-              <CourseCard
-                courseName={reservation.name}
-                courseDesc={reservation.description}
-                courseImage={reservation.picture}
-                courseDate={formatDate(reservation.sign_up_date)}
-                cityID={reservation.city_id.toString()}
-              />
-              <button type="submit" id={reservation.enrollment_id} className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleRemove}>
-                Cancel Enrollment
-              </button>
+              <div>
+                <CourseCard
+                  courseName={reservation.name}
+                  courseDesc={reservation.description}
+                  courseImage={reservation.picture}
+                  courseDate={formatDate(reservation.sign_up_date)}
+                  cityID={reservation.city_id.toString()}
+                />
+                <button type="submit" id={reservation.enrollment_id} className=" ml-16 btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleRemove}>
+                  Cancel Enrollment
+                </button>
+              </div>
             </div>
           ))}
         </div>
