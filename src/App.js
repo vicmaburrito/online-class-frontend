@@ -16,6 +16,7 @@ import { GET_USER_DATA, CHANGE_USER_STATUS } from './redux/reducers/token';
 import ProtectedRoutes from './components/ProtectedRoutes';
 import Role from './constants/Role';
 import PATH_URL from './constants/urlPaths';
+import Home from './pages/Home/Home';
 
 function App() {
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ function App() {
 
       <SideNav />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Homepage />} />
         <Route path="//auth/login" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
