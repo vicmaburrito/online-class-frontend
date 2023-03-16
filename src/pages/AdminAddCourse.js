@@ -6,9 +6,11 @@ import Message from '../components/Message';
 import { addCourse, setState } from '../redux/reducers/courses';
 
 const AdminAddCourse = () => {
+  const user = useSelector((state) => state.token.userData);
   const token = useSelector((state) => state.token.userData.token);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
+    user_id: user.id,
     name: '',
     picture: '',
     description: '',
