@@ -1,0 +1,53 @@
+.first-block {
+  min-height: 30rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(337deg, rgba(0, 0, 0, 0.9) -40%, rgba(17, 8, 8, 0.6) 100%), url("https://images.unsplash.com/photo-1516397281156-ca07cf9746fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8b25saW5lJTIwY291cnNlc3xlbnwwfHwwfHw%3D&w=1000&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button-bg {
+  background: rgb(228, 157, 204);
+}
+
+@media (min-width: 992px) {
+  .first-block {
+    height: 100vh;
+  }
+}
+
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+.scale-down-center {
+  animation: scale-down-center 900ms ease-in-out 1s alternate-reverse both;
+}
+
+@keyframes bounce-title {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% { transform: translateY(0); }
+  40% { transform: translateY(35px); }
+  60% { transform: translateY(50px); }
+}
+
+.title-animation {
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-name: bounce-title;
+}
