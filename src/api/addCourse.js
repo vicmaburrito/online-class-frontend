@@ -7,16 +7,9 @@ const addCourseAPI = async (token, formData) => {
   const formdata = new FormData();
 
   formdata.append('name', formData.name);
-  formdata.append('location', formData.location);
+  formdata.append('picture', formData.picture);
   formdata.append('description', formData.description);
-  formdata.append('price', formData.price);
-  formData.images.forEach((el, i) => {
-    formdata.append('images[]', formData.images[i], el);
-  });
-
-  formData.date.forEach((el, i) => {
-    formdata.append(`course_dates_attributes[${i}][date]`, el);
-  });
+  formdata.append('max_num_students', formData.max_num_students);
 
   const requestOptions = {
     method: 'POST',

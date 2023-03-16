@@ -20,9 +20,7 @@ const AdminAddCourse = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.date.length > 0) {
-      dispatch(addCourse({ token, formData }));
-    }
+    dispatch(addCourse({ token, formData }));
   };
 
   const handleChange = (e) => {
