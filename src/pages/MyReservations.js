@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -32,11 +31,11 @@ function MyReservations() {
       const response = await axios(`${host}/enrollments/${id}`, requestOptions);
       if (response.status === 204) {
         window.location.reload(); // Reload the page to reflect the new data
-      } else {
-        console.log('Failed to delete reservation:', response.data);
+        return;
       }
     } catch (error) {
-      console.log('Error deleting reservation:', error);
+      // eslint-disable-next-line consistent-return
+      return ('Error deleting reservation:', error);
     }
   };
 

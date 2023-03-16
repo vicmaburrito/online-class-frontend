@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,11 +29,11 @@ const DeleteCourse = () => {
       const response = await axios(`${host}/courses/${id}`, requestOptions);
       if (response.status === 204) {
         window.location.reload(); // Reload the page to reflect the new data
-      } else {
-        console.log('Failed to delete course:', response.data);
+        return;
       }
     } catch (error) {
-      console.log('Error deleting course:', error);
+      // eslint-disable-next-line consistent-return
+      return ('Error deleting course:', error);
     }
   };
 
