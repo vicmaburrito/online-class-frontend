@@ -26,7 +26,7 @@ export const addCourse = createAsyncThunk(
   async ({ token, formData }, { rejectWithValue }) => {
     const res = await addCourseAPI(token, formData);
 
-    if (res.includes('Course was created succesfully')) {
+    if (res) {
       return res;
     }
 
