@@ -44,26 +44,27 @@ const CourseDetails = () => {
             <div className="md:w-3/5 md:mx-auto">
               <Carousel images={[{ id: 1, src: course.picture }]} />
             </div>
-            <div className="sidebar mt-4 md:w-[20%] md:flex-none">
-              <h2 className="font-semibold text-2xl md:text-4xl text-center md:text-end mb-4">
+            <div className="sidebar mt-4 md:w-[30%] md:flex-none">
+              <h2 className="font-semibold text-2xl md:text-4xl text-center md:text-center mb-4">
                 {course.name}
               </h2>
               <ul>
-                <li className="bg-gray">
-                  <p className="text-lg p-2">
+                <li className="bg-gray" style={{ borderRadius: '20px' }}>
+                  <p className="text-lg p-2" style={{ width: '100%', padding: '19px' }}>
                     {course.description}
                   </p>
                 </li>
-                <li className="bg-gray">
-                  <p className="text-lg p-2">
-                    Studends:
-                    {course.max_num_students}
-                  </p>
+                <li>
+                  <div style={{ backgroundColor: '#ffff', paddingTop: '10px' }}>
+                    <div style={{ color: 'black', fontSize: '1.5rem' }}>
+                      <span>
+                        <em><b>Maximum Capacity of Students:</b></em>
+                        {course.max_num_students}
+                      </span>
+                    </div>
+                  </div>
                 </li>
-                <li className="mt-4">
-                  <p className="break-spaces">{course.description}</p>
-                </li>
-                <li className="mt-4 mb-12 flex justify-end">
+                <li className="mt-4 mb-12 flex justify-center">
                   <Link to="/reservation/new">
                     <Button
                       btnName="Reserve Course"
