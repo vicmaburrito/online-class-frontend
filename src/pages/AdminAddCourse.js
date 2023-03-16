@@ -10,8 +10,9 @@ const AdminAddCourse = () => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     name: '',
-    location: '',
+    picture: '',
     description: '',
+    max_num_students: 0,
   });
 
   const status = useSelector((state) => state.courses.status);
@@ -67,8 +68,16 @@ const AdminAddCourse = () => {
             <input
               onChange={handleChange}
               type="text"
-              name="location"
-              placeholder="Location"
+              name="picture"
+              placeholder="Picture Url"
+              className="py-2 px-5 rounded-full font-semibold bg-transparent text-white border-white border placeholder:text-white"
+              required
+            />
+            <input
+              onChange={handleChange}
+              type="number"
+              name="max_num_students"
+              placeholder="Number of students"
               className="py-2 px-5 rounded-full font-semibold bg-transparent text-white border-white border placeholder:text-white"
               required
             />
