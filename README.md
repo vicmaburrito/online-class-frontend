@@ -35,7 +35,7 @@
 - [FRONT-END-REACT-APP](https://github.com/vicmaburrito/online-class-frontend)
 
 
->  This is a project that create a reservation to a class in a school.
+>  This is a project that create a reservation to a class in a school, 
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -52,14 +52,58 @@
 - Webpack
 
 <!-- Features -->
+[BACK-END-RUBY-ON-RAILS](https://github.com/vicmaburrito/online-class-backend)
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://code.visualstudio.com/">Viual Studio Code</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
+
+> The next key features are availble in this project.
+
+### <b>JWT</b>
+
+JWT (JSON Web Token) is a standard that is contained in the RFC 7519 document.
+
+In it, a mechanism is defined to be able to propagate between two parties, and in a secure way, the identity of a certain user, also with a series of claims or privileges.
+
+These privileges are encoded in JSON-type objects, which are embedded within the payload or body of a message that is digitally signed.
+
+### <b> Token</b>
+
+Is a text string that has three Base64-encoded parts, each separated by a dot
+
+* <b>Header</b>: the algorithm and the type of token are indicated, which in this case we use JWT token.
+
+* <b>Payload</b>: the user data and privileges appear, as well as all the information that we want to add, all the data that we deem convenient.
+
+[More Info](https://openwebinars.net/blog/que-es-json-web-token-y-como-funciona/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+  - [Live Demo Link](https://dev--remarkable-wisp-da7afd.netlify.app/)
 
 > You can see the deployment once it is executed in the next link.
 
@@ -73,11 +117,18 @@
 
 > To get a local copy up and running, follow these steps.
 
+
 ### Prerequisites
 
 In order to run this project you need:
 
-> Install a text-editor you prefer. [Code editors](https://desarrolloweb.com/colecciones/editores-codigo).
+1. Node.js: React is built on top of Node.js, Therefore, you need to have Node.js installed on your machine.
+
+2. Text Editor: You will need a text editor to write your React code. such as Visual Studio Code, Atom, and Sublime Text.
+
+3. Web Browser: You will need a web browser to view your React app. such as Google Chrome, Firefox, and Safari.
+
+4. Command Line Interface (CLI): You will need a CLI to run commands for installing dependencies and running your React app. The most commonly used CLI for React development is the Node Package Manager (npm).
 
 
 ### Setup
@@ -108,6 +159,12 @@ Install this project with:
 - npm run build
 - npm run start
 ```
+### Deployment <a name="deployment"></a>
+
+You can deploy this project using:
+- [Netlify](https://app.netlify.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
