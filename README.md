@@ -35,6 +35,13 @@ npm run start
 - Twitter: [@Mohi_Aghaali](https://twitter.com/Mohi_Aghaali)
 - LinkedIn: [mahdi-aghaali](https://www.linkedin.com/in/mahdi-aghaali/)
 
+
+**Odette Gleen**
+
+- GitHub: [@Gleennkar](https://github.com/Gleennkar)
+- Twitter: [@gleeny24](https://twitter.com/twitterhandle)
+- LinkedIn: [@gleeny](https://www.linkedin.com/in/gleeny-nkar-aa3917182)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
