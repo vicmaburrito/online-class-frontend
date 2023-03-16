@@ -8,6 +8,8 @@ const AdminLinks = [
 const UserLinks = [
   { id: 'Home', src: 'Home', path: '/courses' },
   { id: 'Reservation', src: 'My Reservations', path: '/reservations' },
+  { id: 'new-course', src: ' New Course', path: '/course/new' },
+  { id: 'delete', src: 'Delete Course', path: '/courses/delete' },
 ];
 
 const GuestLinks = [
