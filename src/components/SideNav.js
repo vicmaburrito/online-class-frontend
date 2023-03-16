@@ -37,12 +37,12 @@ const SideNav = () => {
 
   return (
     <div className="side-nav flex flex-col justify-between w-4/5 md:w-2/5 lg:w-1/5 h-screen bg-white border border-r-gray p-4 fixed left-0 top-0 z-[1000] translate-x-[-100%] transform duration-500 delay-300 ease-in-out shadow-xl" onMouseLeave={hideSideBar}>
-      <Link to="/" className="p-0 mt-4 -ml-5">
+      <Link to="/" className="p-0 m-0">
         <img
           src="https://cdn.buttercms.com/SKLnmhpShSsNxosJpRI2"
           alt="logo"
-          className="transform scale-75]"
-          style={{ margin: '20px' }}
+          className="transform scale-75"
+          style={{ padding: '20px' }}
         />
       </Link>
       <GrFormClose
@@ -56,7 +56,7 @@ const SideNav = () => {
               key={link.id}
               to={link.path}
               className="uppercase font-bold tracking-wider hover:bg-green focus:bg-green
-              w-full px-2 py-3 transition duration-300 ease
+              w-full px-2 py-2 transition duration-300 ease
               hover:text-white focus:text-white rounded "
               onClick={hideSideBar}
             >
@@ -66,7 +66,7 @@ const SideNav = () => {
           ))}
         </div>
         {isSignedIn && (
-          <button type="submit" className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold my-auto text-center" onClick={handleSignOut}>
+          <button type="submit" className="btn-red text-white mt-5 bg-red py-1 px-5 rounded font-semibold mb-2 text-center" onClick={handleSignOut}>
             Sign Out
           </button>
         )}
