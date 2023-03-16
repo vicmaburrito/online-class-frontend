@@ -1,3 +1,4 @@
+
 /* eslint-disable import/extensions */
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -77,7 +78,7 @@ function App() {
         <Route
           path="/course/new"
           element={(
-            <ProtectedRoutes roles={[Role.ADMIN]}>
+            <ProtectedRoutes roles={[Role.USER, Role.ADMIN]}>
               <AdminAddCourse />
             </ProtectedRoutes>
           )}
@@ -85,7 +86,7 @@ function App() {
         <Route
           path="/courses/delete"
           element={(
-            <ProtectedRoutes roles={[Role.ADMIN]}>
+            <ProtectedRoutes roles={[Role.USER, Role.ADMIN]}>
               <DeleteCourse />
             </ProtectedRoutes>
           )}
