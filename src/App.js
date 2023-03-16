@@ -78,7 +78,7 @@ function App() {
         <Route
           path="/course/new"
           element={(
-            <ProtectedRoutes roles={[Role.ADMIN]}>
+            <ProtectedRoutes roles={[Role.USER, Role.ADMIN]}>
               <AdminAddCourse />
             </ProtectedRoutes>
           )}
@@ -86,7 +86,7 @@ function App() {
         <Route
           path="/courses/delete"
           element={(
-            <ProtectedRoutes roles={[Role.ADMIN]}>
+            <ProtectedRoutes roles={[Role.USER, Role.ADMIN]}>
               <DeleteCourse />
             </ProtectedRoutes>
           )}

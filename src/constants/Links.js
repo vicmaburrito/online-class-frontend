@@ -10,6 +10,8 @@ const UserLinks = [
   { id: 'Home', src: 'Home', path: '/' },
   { id: 'Courses', src: 'Courses', path: '/courses' },
   { id: 'Reservation', src: 'My Reservations', path: '/reservations' },
+  { id: 'new-course', src: ' New Course', path: '/course/new' },
+  { id: 'delete', src: 'Delete Course', path: '/courses/delete' },
 ];
 
 const GuestLinks = [
