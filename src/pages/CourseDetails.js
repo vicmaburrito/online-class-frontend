@@ -58,7 +58,9 @@ const CourseDetails = () => {
                   <div style={{ backgroundColor: '#ffff', paddingTop: '10px' }}>
                     <div style={{ color: 'black', fontSize: '1.5rem' }}>
                       <span>
-                        <em><b>Maximum Capacity of Students:</b></em>
+                        <em>
+                          <b>Maximum Capacity of Students:</b>
+                        </em>
                         {course.max_num_students}
                       </span>
                     </div>
