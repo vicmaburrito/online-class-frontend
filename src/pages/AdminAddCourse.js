@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Calendar from '../components/Calendar';
 import Button from '../components/Button';
 import Message from '../components/Message';
 import { addCourse, setState } from '../redux/reducers/courses';
@@ -11,11 +10,9 @@ const AdminAddCourse = () => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     name: '',
-    location: '',
-    price: 0,
+    picture: '',
     description: '',
-    images: [],
-    date: [],
+    max_num_students: 0,
   });
 
   const status = useSelector((state) => state.courses.status);
@@ -23,24 +20,12 @@ const AdminAddCourse = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.date.length > 0) {
-      dispatch(addCourse({ token, formData }));
-    }
+    dispatch(addCourse({ token, formData }));
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const fileSelectedHandler = (e) => {
-    setFormData({ ...formData, images: [...e.target.files] });
-  };
-
-  const handleDateChange = (e) => {
-    setFormData({ ...formData, date: [...formData.date, e] });
-  };
-
-  const [calendarCount, setcalendarCount] = useState([1]);
 
   useEffect(() => {
     if (status === 'Added') {
@@ -81,19 +66,17 @@ const AdminAddCourse = () => {
             <input
               onChange={handleChange}
               type="text"
-              name="location"
-              placeholder="Location"
+              name="picture"
+              placeholder="Picture Url"
               className="py-2 px-5 rounded-full font-semibold bg-transparent text-white border-white border placeholder:text-white"
               required
             />
             <input
               onChange={handleChange}
               type="number"
-              name="price"
-              placeholder="Price"
+              name="max_num_students"
+              placeholder="Number of students"
               className="py-2 px-5 rounded-full font-semibold bg-transparent text-white border-white border placeholder:text-white"
-              step={0.01}
-              min={0.01}
               required
             />
             <textarea
@@ -104,26 +87,6 @@ const AdminAddCourse = () => {
               className="py-2 px-5 rounded-xl font-semibold bg-transparent text-white border-white border placeholder:text-white"
               required
             />
-            <input
-              onInput={fileSelectedHandler}
-              name="images"
-              type="file"
-              multiple="multiple"
-              accept="image/*"
-              required
-            />
-            <div className="flex flex-col gap-1">
-              {calendarCount.map((counter) => (
-                <Calendar key={counter} handleDateChange={handleDateChange} />
-              ))}
-              <button
-                type="button"
-                className="bg-orange py-1 px-2 text-white rounded-full font-semibold my-auto text-center w-2/5 ml-auto"
-                onClick={() => setcalendarCount([...calendarCount, calendarCount.length + 1])}
-              >
-                Add a date
-              </button>
-            </div>
           </fieldset>
           <Button
             btnType="submit"
