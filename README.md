@@ -30,9 +30,9 @@
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
-# 💻 Front end react app <a name="front-end-react-app"></a>
-- You can go through the link and execute the front-end react project to enjoy a view about what the api offer.
-- [FRONT-END-REACT-APP](https://github.com/vicmaburrito/online-class-frontend)
+# 💻 Back end react app <a name="front-end-react-app"></a>
+- You can go through the link and execute the back-end react project to enjoy a view about what the api offer.
+- [BACK-END-REACT-APP](https://github.com/vicmaburrito/online-class-backend)
 
 
 >  This is a project that create a reservation to a class in a school, 
@@ -186,6 +186,18 @@ You can deploy this project using:
 - Twitter: [@gleeny24](https://twitter.com/twitterhandle)
 - LinkedIn: [@gleeny](https://www.linkedin.com/in/gleeny-nkar-aa3917182)
 
+👤 **JOSE ZEPEDA**
+
+- GitHub: [J2ZROMERO](https://github.com/J2ZROMERO)
+- Twitter: [@JOSEZEPED4](https://twitter.com/JOSEZEPED4)
+- LinkedIn: [JOSE ZEPEDA](https://www.linkedin.com/in/jose-zepeda-733ab91ab/)
+
+👤 **Manuel Aldaraca**
+
+- https://www.linkedin.com/in/manuelaldaraca/
+- https://twitter.com/manuelaldaraca
+- https://github.com/vicmaburrito
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -247,7 +259,7 @@ I would like to thank MICROVERSE for preparing the content to work.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/vicmaburrito/online-class-backend/blob/dev/MIT.md) licensed.
+This project is [MIT](https://github.com/vicmaburrito/online-class-frontend/blob/dev/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
