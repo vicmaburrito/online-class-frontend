@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import host from '../api/host';
 import Container from '../components/Container';
 import { fetchCourses } from '../redux/reducers/courses';
@@ -9,7 +10,7 @@ const DeleteCourse = () => {
   const token = useSelector((state) => state.token.userData.token);
   const courses = useSelector((state) => state.courses.package);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(fetchCourses());
   }, []);
@@ -28,7 +29,7 @@ const DeleteCourse = () => {
     try {
       const response = await axios(`${host}/courses/${id}`, requestOptions);
       if (response.status === 204) {
-        window.location.reload(); // Reload the page to reflect the new data
+        navigate('/courses'); // Reload the page to reflect the new data
         return;
       }
     } catch (error) {

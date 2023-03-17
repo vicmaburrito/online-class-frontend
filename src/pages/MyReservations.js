@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CourseCard from '../components/CourseCard';
 import getReservations from '../api/MyReservation';
@@ -14,6 +15,8 @@ function MyReservations() {
   useEffect(() => {
     dispatch(getReservations());
   }, []);
+
+  const navigate = useNavigate();
 
   const handleRemove = async (e) => {
     const { id } = e.target;
@@ -30,7 +33,7 @@ function MyReservations() {
     try {
       const response = await axios(`${host}/enrollments/${id}`, requestOptions);
       if (response.status === 204) {
-        window.location.reload(); // Reload the page to reflect the new data
+        navigate('/courses'); // Reload the page to reflect the new data
         return;
       }
     } catch (error) {
