@@ -80,13 +80,13 @@ const ReserveForm = () => {
   const [packageOptions, setPackageOptions] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       const response = await axios(`${host}/cities`);
       const { data } = response;
       // eslint-disable-next-line camelcase
       const newData = data.map(({ id, city_name }) => ({ id, item: city_name }));
       setPackageOptions(newData);
-    }
+    };
     fetchData();
   }, []);
 

@@ -6,7 +6,7 @@ import CourseCard from '../components/CourseCard';
 import getReservations from '../api/MyReservation';
 import host from '../api/host';
 
-function MyReservations() {
+const MyReservations = () => {
   const reservations = useSelector(
     (state) => state.myReservations.reservations,
   );
@@ -43,13 +43,13 @@ function MyReservations() {
   };
 
   // eslint-disable-next-line camelcase
-  function formatDate(sign_up_date) {
+  const formatDate = (sign_up_date) => {
     const date = new Date(sign_up_date);
     const day = date.toLocaleString('default', { day: 'numeric' });
     const month = date.toLocaleString('default', { month: 'long' });
     const year = date.getFullYear();
     return `${month} ${day}, ${year}`;
-  }
+  };
 
   return (
     <section className="w-screen relative flex flex-col justify-center min-h-screen bg-opacity-80 md:w-full md:pb-1 mb:overflow-scroll">
@@ -86,6 +86,6 @@ function MyReservations() {
 
     </section>
   );
-}
+};
 
 export default MyReservations;

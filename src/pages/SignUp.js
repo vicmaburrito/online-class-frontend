@@ -7,7 +7,7 @@ import CreateUser from '../api/SignUp';
 import Message from '../components/Message';
 import { updateSignedInStatus } from '../redux/reducers/users';
 
-export default function SignUp() {
+const SignUp = () => {
   const signedIn = useSelector((state) => state.signedIn);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
@@ -124,4 +124,6 @@ export default function SignUp() {
       </div>
     </div>
   );
-}
+};
+
+export default SignUp;

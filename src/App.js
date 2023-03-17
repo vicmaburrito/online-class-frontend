@@ -18,7 +18,7 @@ import Role from './constants/Role';
 import PATH_URL from './constants/urlPaths';
 import Home from './pages/Home/Home';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
 
@@ -94,6 +94,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

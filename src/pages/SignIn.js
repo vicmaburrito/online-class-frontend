@@ -8,7 +8,7 @@ import confirmAccountAPI from '../api/confirmAccount';
 import { updateSignedInStatus } from '../redux/reducers/users';
 import Message from '../components/Message';
 
-export default function SignIn() {
+const SignIn = () => {
   const signedIn = useSelector((state) => state.signedIn);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -120,4 +120,6 @@ export default function SignIn() {
       </div>
     </div>
   );
-}
+};
+
+export default SignIn;

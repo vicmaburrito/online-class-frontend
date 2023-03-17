@@ -7,8 +7,6 @@ const getReservations = createAsyncThunk(
     const response = await fetch(`${host}/enrollments`, {
       method: 'GET',
       headers: {
-        // accept: 'application/json',
-        // 'Content-Type': 'application/json',
         Authorization: JSON.parse(localStorage.getItem('user')).token,
       },
     });

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BiDownArrow } from 'react-icons/bi';
 // Select has to be customized in styling later on, this is the skeleton for it.
-function FormSelect({ setCoursePackage }) {
+const FormSelect = ({ setCoursePackage }) => {
   const openDropDown = () => {
     const dropDown = document.getElementById('package-select');
     dropDown.focus();
@@ -36,7 +36,7 @@ function FormSelect({ setCoursePackage }) {
       />
     </div>
   );
-}
+};
 FormSelect.propTypes = {
   setCoursePackage: PropTypes.func.isRequired,
 };

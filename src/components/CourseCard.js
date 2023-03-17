@@ -12,13 +12,13 @@ const CourseCard = (props) => {
 
   if (cityID) {
     useEffect(() => {
-      async function fetchData() {
+      const fetchData = async () => {
         const response = await axios(`${host}/cities`);
         const { data } = response;
         // eslint-disable-next-line eqeqeq
         const newData = data.filter((item) => item.id == cityID);
         setPackageOptions(newData[0]);
-      }
+      };
       fetchData();
     }, []);
   }

@@ -13,7 +13,7 @@ const defaultCourse = {
   },
 };
 
-export default function courseReducer(state = defaultCourse, action) {
+const courseReducer = (state = defaultCourse, action) => {
   switch (action.type) {
     case SET_COURSE_DETAIL: {
       return { ...state, courseDetail: action.courseDetail };
@@ -24,12 +24,10 @@ export default function courseReducer(state = defaultCourse, action) {
     default:
       return state;
   }
-}
+};
 
-export function setCourseDetail(courseDetail) {
-  return { type: SET_COURSE_DETAIL, courseDetail };
-}
+export const setCourseDetail = (courseDetail) => ({ type: SET_COURSE_DETAIL, courseDetail });
 
-export function setCourseLoading(loading) {
-  return { type: SET_COURSE_LOADING, loading };
-}
+export const setCourseLoading = (loading) => ({ type: SET_COURSE_LOADING, loading });
+
+export default courseReducer;

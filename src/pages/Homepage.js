@@ -12,7 +12,7 @@ import {
 } from '../redux/reducers/homepageCourses';
 import Spinner from '../components/Spinner';
 
-function Homepage() {
+const Homepage = () => {
   const signedIn = useSelector((state) => state.signedIn);
   const status = useSelector((state) => state.home.status);
   const courses = useSelector((state) => state.home.courses);
@@ -96,6 +96,6 @@ function Homepage() {
       )}
     </section>
   );
-}
+};
 
 export default Homepage;
